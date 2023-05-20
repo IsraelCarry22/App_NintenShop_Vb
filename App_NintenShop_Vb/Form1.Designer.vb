@@ -55,6 +55,9 @@ Partial Class Form1
         lbl_Bits = New Label()
         lbl_Creadores = New Label()
         Panel_Carrito = New Panel()
+        Panel_Ayuda = New Panel()
+        PictureBox3 = New PictureBox()
+        PictureBox4 = New PictureBox()
         Btn_Elimiar_Item = New Button()
         Btn_Comprar_Carrito = New Button()
         lbl_Total_Carrito = New Label()
@@ -67,6 +70,8 @@ Partial Class Form1
         Consola = New DataGridViewTextBoxColumn()
         Precio = New DataGridViewTextBoxColumn()
         Label2 = New Label()
+        Label5 = New Label()
+        Label6 = New Label()
         CType(Btn_Pic_Nes, ComponentModel.ISupportInitialize).BeginInit()
         CType(Btn_Pic_Gb, ComponentModel.ISupportInitialize).BeginInit()
         CType(Btn_Pic_Snes, ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +83,9 @@ Partial Class Form1
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(Pic_Caratula, ComponentModel.ISupportInitialize).BeginInit()
         Panel_Carrito.SuspendLayout()
+        Panel_Ayuda.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(Dgv_Carrito, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -161,38 +169,40 @@ Partial Class Form1
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1034, 24)
         MenuStrip1.TabIndex = 0
-        MenuStrip1.Text = "MenuStrip1" ' 
+        MenuStrip1.Text = "MenuStrip1"' 
         ' InicioToolStripMenuItem
         ' 
         InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
         InicioToolStripMenuItem.Size = New Size(48, 20)
-        InicioToolStripMenuItem.Text = "Inicio" ' 
+        InicioToolStripMenuItem.Text = "Inicio"' 
         ' CarritoToolStripMenuItem
         ' 
         CarritoToolStripMenuItem.Name = "CarritoToolStripMenuItem"
         CarritoToolStripMenuItem.Size = New Size(55, 20)
-        CarritoToolStripMenuItem.Text = "Carrito" ' 
+        CarritoToolStripMenuItem.Text = "Carrito"' 
         ' AyudaToolStripMenuItem
         ' 
         AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         AyudaToolStripMenuItem.Size = New Size(53, 20)
-        AyudaToolStripMenuItem.Text = "Ayuda" ' 
+        AyudaToolStripMenuItem.Text = "Ayuda"' 
         ' PictureBox1
         ' 
+        PictureBox1.Dock = DockStyle.Fill
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(14, 27)
+        PictureBox1.Location = New Point(0, 24)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(194, 63)
+        PictureBox1.Size = New Size(1034, 654)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.Dock = DockStyle.Fill
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(207, 27)
+        PictureBox2.Location = New Point(0, 24)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(194, 63)
+        PictureBox2.Size = New Size(1034, 654)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 2
         PictureBox2.TabStop = False
@@ -215,7 +225,7 @@ Partial Class Form1
         lbl_Contador_Carrito.Name = "lbl_Contador_Carrito"
         lbl_Contador_Carrito.Size = New Size(17, 15)
         lbl_Contador_Carrito.TabIndex = 10
-        lbl_Contador_Carrito.Text = "--" ' 
+        lbl_Contador_Carrito.Text = "--"' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -224,7 +234,7 @@ Partial Class Form1
         Label1.Name = "Label1"
         Label1.Size = New Size(251, 30)
         Label1.TabIndex = 11
-        Label1.Text = "Selecciona una consola" ' 
+        Label1.Text = "Selecciona una consola"' 
         ' Lista_Juegos
         ' 
         Lista_Juegos.Font = New Font("Segoe UI Symbol", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
@@ -269,7 +279,7 @@ Partial Class Form1
         lbl_Titulo.Name = "lbl_Titulo"
         lbl_Titulo.Size = New Size(30, 25)
         lbl_Titulo.TabIndex = 15
-        lbl_Titulo.Text = "--" ' 
+        lbl_Titulo.Text = "--"' 
         ' lbl_Precio
         ' 
         lbl_Precio.AutoSize = True
@@ -279,7 +289,7 @@ Partial Class Form1
         lbl_Precio.Name = "lbl_Precio"
         lbl_Precio.Size = New Size(31, 30)
         lbl_Precio.TabIndex = 22
-        lbl_Precio.Text = "--" ' 
+        lbl_Precio.Text = "--"' 
         ' lbl_Genero
         ' 
         lbl_Genero.AutoSize = True
@@ -288,7 +298,7 @@ Partial Class Form1
         lbl_Genero.Name = "lbl_Genero"
         lbl_Genero.Size = New Size(30, 25)
         lbl_Genero.TabIndex = 23
-        lbl_Genero.Text = "--" ' 
+        lbl_Genero.Text = "--"' 
         ' Lbl_Año
         ' 
         Lbl_Año.AutoSize = True
@@ -297,7 +307,7 @@ Partial Class Form1
         Lbl_Año.Name = "Lbl_Año"
         Lbl_Año.Size = New Size(30, 25)
         Lbl_Año.TabIndex = 25
-        Lbl_Año.Text = "--" ' 
+        Lbl_Año.Text = "--"' 
         ' lbl_Consola
         ' 
         lbl_Consola.AutoSize = True
@@ -306,7 +316,7 @@ Partial Class Form1
         lbl_Consola.Name = "lbl_Consola"
         lbl_Consola.Size = New Size(30, 25)
         lbl_Consola.TabIndex = 24
-        lbl_Consola.Text = "--" ' 
+        lbl_Consola.Text = "--"' 
         ' lbl_Bits
         ' 
         lbl_Bits.AutoSize = True
@@ -315,7 +325,7 @@ Partial Class Form1
         lbl_Bits.Name = "lbl_Bits"
         lbl_Bits.Size = New Size(30, 25)
         lbl_Bits.TabIndex = 26
-        lbl_Bits.Text = "--" ' 
+        lbl_Bits.Text = "--"' 
         ' lbl_Creadores
         ' 
         lbl_Creadores.AutoSize = True
@@ -324,9 +334,10 @@ Partial Class Form1
         lbl_Creadores.Name = "lbl_Creadores"
         lbl_Creadores.Size = New Size(30, 25)
         lbl_Creadores.TabIndex = 27
-        lbl_Creadores.Text = "--" ' 
+        lbl_Creadores.Text = "--"' 
         ' Panel_Carrito
         ' 
+        Panel_Carrito.Controls.Add(Panel_Ayuda)
         Panel_Carrito.Controls.Add(Btn_Elimiar_Item)
         Panel_Carrito.Controls.Add(Btn_Comprar_Carrito)
         Panel_Carrito.Controls.Add(lbl_Total_Carrito)
@@ -341,6 +352,38 @@ Partial Class Form1
         Panel_Carrito.Size = New Size(1034, 654)
         Panel_Carrito.TabIndex = 28
         Panel_Carrito.Visible = False
+        ' 
+        ' Panel_Ayuda
+        ' 
+        Panel_Ayuda.Controls.Add(Label6)
+        Panel_Ayuda.Controls.Add(Label5)
+        Panel_Ayuda.Controls.Add(PictureBox3)
+        Panel_Ayuda.Controls.Add(PictureBox4)
+        Panel_Ayuda.Dock = DockStyle.Fill
+        Panel_Ayuda.Location = New Point(0, 0)
+        Panel_Ayuda.Name = "Panel_Ayuda"
+        Panel_Ayuda.Size = New Size(1034, 654)
+        Panel_Ayuda.TabIndex = 8
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(521, 38)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(318, 81)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 30
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(203, 38)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(318, 81)
+        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox4.TabIndex = 29
+        PictureBox4.TabStop = False
         ' 
         ' Btn_Elimiar_Item
         ' 
@@ -375,7 +418,7 @@ Partial Class Form1
         lbl_Total_Carrito.Name = "lbl_Total_Carrito"
         lbl_Total_Carrito.Size = New Size(31, 30)
         lbl_Total_Carrito.TabIndex = 5
-        lbl_Total_Carrito.Text = "--" ' 
+        lbl_Total_Carrito.Text = "--"' 
         ' lbl_Total_Iva
         ' 
         lbl_Total_Iva.AutoSize = True
@@ -385,16 +428,16 @@ Partial Class Form1
         lbl_Total_Iva.Name = "lbl_Total_Iva"
         lbl_Total_Iva.Size = New Size(29, 30)
         lbl_Total_Iva.TabIndex = 4
-        lbl_Total_Iva.Text = "--" ' 
+        lbl_Total_Iva.Text = "--"' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI Historic", 24.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.Font = New Font("Segoe UI Historic", 24F, FontStyle.Regular, GraphicsUnit.Point)
         Label4.Location = New Point(33, 595)
         Label4.Name = "Label4"
         Label4.Size = New Size(98, 45)
         Label4.TabIndex = 3
-        Label4.Text = "Total:" ' 
+        Label4.Text = "Total:"' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -403,7 +446,7 @@ Partial Class Form1
         Label3.Name = "Label3"
         Label3.Size = New Size(133, 30)
         Label3.TabIndex = 2
-        Label3.Text = "Sub total iva:" ' 
+        Label3.Text = "Sub total iva:"' 
         ' Dgv_Carrito
         ' 
         Dgv_Carrito.AllowUserToAddRows = False
@@ -477,6 +520,24 @@ Partial Class Form1
         Label2.Size = New Size(160, 40)
         Label2.TabIndex = 0
         Label2.Text = "Tu Carrito:"' 
+        ' Label5
+        ' 
+        Label5.Font = New Font("Segoe UI Historic", 24F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.Location = New Point(33, 162)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(965, 322)
+        Label5.TabIndex = 31
+        Label5.Text = resources.GetString("Label5.Text")
+        Label5.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' Label6
+        ' 
+        Label6.Font = New Font("MV Boli", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.Location = New Point(12, 613)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(705, 29)
+        Label6.TabIndex = 32
+        Label6.Text = "Gracias por darle un uso correcto al software: Attm. J. Israel C. Moncada."' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -523,6 +584,9 @@ Partial Class Form1
         CType(Pic_Caratula, ComponentModel.ISupportInitialize).EndInit()
         Panel_Carrito.ResumeLayout(False)
         Panel_Carrito.PerformLayout()
+        Panel_Ayuda.ResumeLayout(False)
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(Dgv_Carrito, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
@@ -567,4 +631,9 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Btn_Elimiar_Item As Button
     Friend WithEvents Btn_Comprar_Carrito As Button
+    Friend WithEvents Panel_Ayuda As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
 End Class

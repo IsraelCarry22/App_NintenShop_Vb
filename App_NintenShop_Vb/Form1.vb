@@ -98,18 +98,22 @@ Public Class Form1
 
     Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
         Panel_Carrito.Visible = False
+        Panel_Ayuda.Visible = False
     End Sub
 
     Private Sub CarritoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CarritoToolStripMenuItem.Click
         Panel_Carrito.Visible = True
+        Panel_Ayuda.Visible = False
     End Sub
 
     Private Sub AyudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AyudaToolStripMenuItem.Click
         Panel_Carrito.Visible = True
+        Panel_Ayuda.Visible = True
     End Sub
 
     Private Sub Btn_Pic_Carrito_Click(sender As Object, e As EventArgs) Handles Btn_Pic_Carrito.Click
         Panel_Carrito.Visible = True
+        Panel_Ayuda.Visible = False
     End Sub
 
     Private Sub Btn_Comprar_Click(sender As Object, e As EventArgs) Handles Btn_Comprar.Click
