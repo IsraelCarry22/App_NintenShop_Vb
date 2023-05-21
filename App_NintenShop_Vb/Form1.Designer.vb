@@ -56,6 +56,8 @@ Partial Class Form1
         lbl_Creadores = New Label()
         Panel_Carrito = New Panel()
         Panel_Ayuda = New Panel()
+        Label6 = New Label()
+        Label5 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
         Btn_Elimiar_Item = New Button()
@@ -70,8 +72,6 @@ Partial Class Form1
         Consola = New DataGridViewTextBoxColumn()
         Precio = New DataGridViewTextBoxColumn()
         Label2 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
         CType(Btn_Pic_Nes, ComponentModel.ISupportInitialize).BeginInit()
         CType(Btn_Pic_Gb, ComponentModel.ISupportInitialize).BeginInit()
         CType(Btn_Pic_Snes, ComponentModel.ISupportInitialize).BeginInit()
@@ -187,22 +187,20 @@ Partial Class Form1
         AyudaToolStripMenuItem.Text = "Ayuda"' 
         ' PictureBox1
         ' 
-        PictureBox1.Dock = DockStyle.Fill
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(0, 24)
+        PictureBox1.Location = New Point(12, 27)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1034, 654)
+        PictureBox1.Size = New Size(213, 63)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 1
         PictureBox1.TabStop = False
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.Dock = DockStyle.Fill
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(0, 24)
+        PictureBox2.Location = New Point(222, 27)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(1034, 654)
+        PictureBox2.Size = New Size(213, 63)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 2
         PictureBox2.TabStop = False
@@ -365,6 +363,24 @@ Partial Class Form1
         Panel_Ayuda.Size = New Size(1034, 654)
         Panel_Ayuda.TabIndex = 8
         ' 
+        ' Label6
+        ' 
+        Label6.Font = New Font("MV Boli", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.Location = New Point(12, 613)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(705, 29)
+        Label6.TabIndex = 32
+        Label6.Text = "Gracias por darle un uso correcto al software: Attm. J. Israel C. Moncada."' 
+        ' Label5
+        ' 
+        Label5.Font = New Font("Segoe UI Historic", 24F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.Location = New Point(33, 162)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(965, 322)
+        Label5.TabIndex = 31
+        Label5.Text = resources.GetString("Label5.Text")
+        Label5.TextAlign = ContentAlignment.TopCenter
+        ' 
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
@@ -520,24 +536,6 @@ Partial Class Form1
         Label2.Size = New Size(160, 40)
         Label2.TabIndex = 0
         Label2.Text = "Tu Carrito:"' 
-        ' Label5
-        ' 
-        Label5.Font = New Font("Segoe UI Historic", 24F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(33, 162)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(965, 322)
-        Label5.TabIndex = 31
-        Label5.Text = resources.GetString("Label5.Text")
-        Label5.TextAlign = ContentAlignment.TopCenter
-        ' 
-        ' Label6
-        ' 
-        Label6.Font = New Font("MV Boli", 14.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label6.Location = New Point(12, 613)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(705, 29)
-        Label6.TabIndex = 32
-        Label6.Text = "Gracias por darle un uso correcto al software: Attm. J. Israel C. Moncada."' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
